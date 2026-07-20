@@ -1,5 +1,22 @@
 # mysa2mqtt
 
+## 1.3.0
+
+### Minor Changes
+
+- [#183](https://github.com/bourquep/mysa2mqtt/pull/183)
+  [`604a3b7`](https://github.com/bourquep/mysa2mqtt/commit/604a3b7df903d09f672b5fe30bacd663d1e9fe1f) Thanks
+  [@vavallee](https://github.com/vavallee)! - Added `--heartbeat-file` / `M2M_HEARTBEAT_FILE`: when set, mysa2mqtt
+  touches the given file on every message received from the Mysa cloud (throttled to one write per 10 seconds). External
+  supervisors can watch the file's mtime to detect a wedged cloud connection and restart the process — for example a
+  Kubernetes exec liveness probe checking that the file is fresher than 15 minutes.
+
+### Patch Changes
+
+- Updated dependencies
+  [[`21991c0`](https://github.com/bourquep/mysa2mqtt/commit/21991c0731cb888dc69d15b3b0dc164aee4992f7)]:
+  - mysa-js-sdk@2.1.2
+
 ## 1.2.4
 
 ### Patch Changes
